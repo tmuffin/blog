@@ -1,2 +1,2 @@
 # blog
-mulberry blog, very stupid
+nuffin blog, very stupid
