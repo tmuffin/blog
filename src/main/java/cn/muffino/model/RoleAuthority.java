@@ -2,7 +2,7 @@
  * Created by Philip 
  */
 
-package com.blog.entity;
+package cn.muffino.model;
 
 import java.sql.Timestamp;
 import javax.persistence.*;
