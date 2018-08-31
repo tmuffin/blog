@@ -1,2 +1,2 @@
 # blog
-nuffin blog, very stupid
+raddeana blog, very stupid
