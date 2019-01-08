@@ -1,3 +1,7 @@
+/**
+ * 服务:用户
+ * @author Philip
+ */
 package cn.muffino.service;
 
 import cn.muffino.model.User;

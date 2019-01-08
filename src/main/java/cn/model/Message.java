@@ -1,6 +1,10 @@
+/**
+ * Model: 留言与评论
+ * @author Philip
+ */
 package cn.muffino.model;
 
-public class User {
+public class Message {
   private Integer userId;  
   private String userName;  
   private String userPassword;  

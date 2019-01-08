@@ -1,6 +1,10 @@
+/**
+ * Model: 文件
+ * @author Philip
+ */
 package cn.muffino.model;
 
-public class User {
+public class File {
   private Integer userId;  
   private String userName;  
   private String userPassword;  

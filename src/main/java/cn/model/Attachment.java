@@ -1,5 +1,6 @@
 /**
- * Created by Steudnera 
+ * Model: 附件
+ * @author Philip
  */
 package com.muffino.model;
 

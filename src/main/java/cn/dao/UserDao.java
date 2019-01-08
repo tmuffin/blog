@@ -1,3 +1,7 @@
+/**
+ * DAO: 用户
+ * @author Philip
+ */
 package cn.muffino.dao;
 
 import cn.muffino.model.User;

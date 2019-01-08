@@ -1,3 +1,7 @@
+/**
+ * Model: 用户名
+ * @author Philip
+ */
 package cn.muffino.model;
 
 public class User {
@@ -5,7 +9,7 @@ public class User {
   private String userName;  
   private String userPassword;  
 
-  public Integer getUserId() {  
+  public Integer getUserId() {
     return userId;  
   }  
 

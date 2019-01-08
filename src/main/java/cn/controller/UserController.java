@@ -1,3 +1,7 @@
+/**
+ * 控制器: 用户
+ * @author Philip
+ */
 package cn.muffino.controller;
 
 import javax.annotation.Resource;

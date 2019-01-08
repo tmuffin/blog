@@ -1,7 +1,7 @@
 /**
- * Created by Philip 
+ * Model: 角色权限
+ * @author Philip
  */
-
 package cn.muffino.model;
 
 import java.sql.Timestamp;
