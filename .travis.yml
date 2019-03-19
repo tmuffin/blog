@@ -1,6 +1,4 @@
-language: java
-sudo: false
-jdk:
-  - oraclejdk9
-script:
-  - mvn test
+language: python
+python:
+  - "3.6"
+script: pytest
