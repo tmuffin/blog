@@ -53,9 +53,9 @@ WSGI_APPLICATION = "app.wsgi.application"
 DATABASES = {
   "default": {
     "ENGINE": "django.db.backends.mysql",
-    "NAME": "robot",
-    "USER": "root",
-    "PASSWORD": "wowcxy2008",
+    "NAME": "blog",
+    "USER": "admin",
+    "PASSWORD": "Wowcxy2008",
     "HOST":"localhost",
     "PORT":"3306",
   }
@@ -81,11 +81,3 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
-LOGIN_URL = "admin/login"
-LOGIN_EXEMPT_URLS = [
-  "",
-  "talk",
-  "api/getWeather",
-  "admin/login"
-]

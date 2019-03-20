@@ -4,13 +4,7 @@ from django.shortcuts import render
 from django.conf import settings
 
 # 机器人页面
-def robot (request):
+def index (request):
   context = {}
   context["env"] = settings.PY_ENV
-  return render(request, "robot.html", context)
-
-# 聊天页面
-def talk (request):
-  context = {}
-  context["env"] = settings.PY_ENV
-  return render(request, "talk.html", context)
+  return render(request, "index.html", context)
