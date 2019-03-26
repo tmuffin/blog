@@ -1,3 +1,3 @@
-from models.content import Content
-from models.tag import Tag
-from models.message import Message
+from dao.content import Content
+from dao.tag import Tag
+from dao.message import Message
