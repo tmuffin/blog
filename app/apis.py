@@ -1,44 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import json
 import urllib.request
-import ssl
 from django.core.paginator import Paginator
-from django.contrib.auth import login as authorize
-from django.contrib.auth import logout as authorize_logout
 
 from db.models import Type
 from db.models import ChatRecord
 
-def getWeather (request):
-  ip = request.GET["ip"]
-  host = "https://ali-weather.showapi.com"
-  path = "/ip-to-weather"
-  method = "GET"
-  appcode = "7be8f8f70a2d47b88d3d1ab5bd9b2e8d"
-  querys = "ip=" + ip + "&need3HourForcast=0&needAlarm=0&needHourData=0&needIndex=0&needMoreDay=0"
-  bodys = {}
-  url = host + path + "?" + querys
-
-  context = ssl._create_unverified_context()
-
-  _request = urllib.request.Request(url)
-  _request.add_header("Authorization", "APPCODE " + appcode)
-
-  with urllib.request.urlopen(_request, context=context) as response:
-    data = response.read()
-    status = response.status
-    reason = response.reason
-    
-  if status == 200:
-    return HttpResponse(data.decode("utf-8"), content_type="application/json; charset=utf-8")
-  else:
-    response = {
-      "reason": reason,
-    }
-    
-    return HttpResponseServerError(reason, content_type="application/json; charset=utf-8")
-  
 def getTypes (request):
   per_page = request.GET["per_page"]
   curr_page = request.GET["curr_page"]

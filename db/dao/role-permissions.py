@@ -1,5 +1,5 @@
 '''
-    dao 标签
+    dao 角色权限
     @author Philip
 '''
 
@@ -7,7 +7,7 @@ from django.db import models
 import django.utils.timezone as timezone
 
 # 标签
-class Tag (models.Model):
+class RolePermissions (models.Model):
   # 标签名称
   name = models.CharField(max_length = 20, null = False)
 

@@ -1,10 +1,10 @@
 '''
-    controller 内容
+    controller 日记
     @author Philip
 '''
 from django.http import HttpResponse
 
-class Content:
+class Diary:
     def query (self, request):
         return HttpResponse({})
     def save (self, request):

@@ -1,5 +1,4 @@
 '''
-    文件
+    dao 文件类型
     @author Philip
 '''
-class File:
