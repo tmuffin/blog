@@ -1,5 +1,6 @@
 '''
-    dao 权限
+    dto 权限
     @author Philip
 '''
 
+class Message:

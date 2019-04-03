@@ -1,4 +1,6 @@
 '''
-    dao 消息
+    dto 消息
     @author Philip
 '''
+
+class Message:

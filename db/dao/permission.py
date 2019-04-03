@@ -4,5 +4,5 @@
 '''
 
 # 权限
-class Permission:
+class Permission(models.Model):
     

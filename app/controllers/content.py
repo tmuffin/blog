@@ -3,6 +3,7 @@
     @author Philip
 '''
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 class Content:
     def query (self, request):

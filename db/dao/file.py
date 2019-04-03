@@ -4,7 +4,7 @@
 '''
 
 # 
-class File:
+class File(models.Model):
     # 
 
     # 

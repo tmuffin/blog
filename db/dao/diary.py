@@ -3,5 +3,5 @@
     @author Philip
 '''
 
-class Diary:
+class Diary (models.Model):
     

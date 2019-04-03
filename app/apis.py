@@ -1,6 +1,6 @@
+import urllib.request
 from django.shortcuts import render
 from django.http import HttpResponse
-import urllib.request
 from django.core.paginator import Paginator
 
 from db.models import Type
