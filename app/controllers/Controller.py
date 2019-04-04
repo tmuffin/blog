@@ -49,9 +49,12 @@ class Controller:
     # 批量删除
     def delete(request):
         ids = request.GET['ids']
+        
+        
+        return HttpResponse(data)
 
 
     # 删除一个对象
     def deleteOne(request):
         id = request.GET['id']
-        
+        return HttpResponse(data)
