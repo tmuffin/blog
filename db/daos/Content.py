@@ -19,14 +19,14 @@ class Content(models.Model):
     # 关键字
     keywords = models.CharField(max_length = 30, null = False)
 
-    # 标题
+    # 标签
     tags = models.CharField(max_length = 30, null = False)
 
-    # 消息内容
+    # 内容
     content = models.CharField(max_length = 80, null = False)
 
     # 保存日期
-    created_at = models.DateTimeField(auto_now = True)
+    createdAt = models.DateTimeField(auto_now = True)
     
     # 最后修改日期
-    updated_at = models.DateTimeField(auto_now = True)
+    updatedAt = models.DateTimeField(auto_now = True)

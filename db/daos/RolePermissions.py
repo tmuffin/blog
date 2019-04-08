@@ -4,7 +4,6 @@
 '''
 
 from django.db import models
-import django.utils.timezone as timezone
 
 # 标签
 class RolePermissions (models.Model):
@@ -16,3 +15,9 @@ class RolePermissions (models.Model):
 
   # 标签描述
   description = models.CharField(max_length = 60, null = True)
+  
+  # 保存日期
+  createdAt = models.DateTimeField(auto_now = True)
+  
+  # 最后修改日期
+  updatedAt = models.DateTimeField(auto_now = True)

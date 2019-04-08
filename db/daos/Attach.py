@@ -3,21 +3,19 @@
     @author Philip
 '''
 from django.db import models
-import django.utils.timezone as timezone
-
 # 内容
 class Attach(models.Model):
-    # 作者
-    type = models.CharField(max_length = 60, null = False)
+    # 附件类型
+    fileType = models.CharField(max_length = 30, null = False)
 
-    # 作者
-    author = models.CharField(max_length = 60, null = False)
+    # 所有人
+    owner = models.CharField(max_length = 30, null = False)
 
-    # 作者
-    author = models.CharField(max_length = 60, null = False)
+    # 文件保存路径
+    path = models.CharField(max_length = 120, null = False)
 
     # 保存日期
-    created_at = models.DateTimeField(auto_now = True)
+    createdAt = models.DateTimeField(auto_now = True)
     
     # 最后修改日期
-    updated_at = models.DateTimeField(auto_now = True)
+    updatedAt = models.DateTimeField(auto_now = True)
