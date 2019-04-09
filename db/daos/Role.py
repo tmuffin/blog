@@ -1,14 +1,16 @@
 '''
-    dao 附件
+    dao 角色
     @author Philip
 '''
 from django.db import models
-from . import File
+from . import Permission
 
-# 内容
-class Attach(models.Model):
-    # 文件
-    file = models.ForeignKey(File, on_delete = models.SET_NULL, null = False)
+class Role (models.Model):
+    # 角色名称
+    name = models.CharField(max_length = 16)
+
+    # 权限
+    permission = models.ManyToManyField(Permission, null = False)
 
     # 保存日期
     createdAt = models.DateTimeField(auto_now = True)

@@ -6,7 +6,7 @@ from django.db import models
 
 class FileType(models.Model):
     # 文件类型
-    name = models.CharField(max_length=20)
+    type = models.CharField(max_length = 32, null = False)
 
     # 保存日期
     createdAt = models.DateTimeField(auto_now = True)

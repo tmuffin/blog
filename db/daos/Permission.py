@@ -4,8 +4,15 @@
 '''
 from django.db import models
 
+# 权限以增删改查, curd, 1-1-1-1
 # 权限
-class Permission(models.Model):
+class Permission (models.Model):
+    # 权限对象
+    object = models.CharField(max_length = 32, null = False)
+
+    # 权限级别
+    permission = models.IntegerField(null = False)
+
     # 保存日期
     createdAt = models.DateTimeField(auto_now = True)
     

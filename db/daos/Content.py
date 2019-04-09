@@ -3,27 +3,24 @@
     @author Philip
 '''
 from django.db import models
-import django.utils.timezone as timezone
+from . import User, Tag
 
 # 内容
 class Content(models.Model):
-    # 类型
-    type = models.CharField(max_length = 15, null = True)
-
     # 作者
-    author = models.CharField(max_length = 60, null = False)
-
-    # 标题
-    title = models.CharField(max_length = 30, null = False)
+    author = models.ForeignKey(User, on_delete = models.SET_NULL, null = False)
 
     # 关键字
-    keywords = models.CharField(max_length = 30, null = False)
+    keywords = models.CharField(max_length = 64, null = False)
 
     # 标签
-    tags = models.CharField(max_length = 30, null = False)
+    tags = models.ManyToManyField(Tag, null = True)
+
+    # 标题
+    title = models.CharField(max_length = 32, null = False)
 
     # 内容
-    content = models.CharField(max_length = 80, null = False)
+    content = models.CharField(max_length = 8192, null = True)
 
     # 保存日期
     createdAt = models.DateTimeField(auto_now = True)
