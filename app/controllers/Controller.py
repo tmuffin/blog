@@ -2,9 +2,8 @@
     controller 基类
     @author Philip
 '''
-from django.http import HttpResponse
+from django.http import JsonResponse, HttpResponse
 from django.contrib.auth.decorators import login_required
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class Controller:
     dto = None
@@ -14,69 +13,76 @@ class Controller:
 
     # 批量查询
     @login_required
-    def query(request):
-        dict = request.GET()
+    def query(self, request):
+        dict = request.GET.dict()
 
         pageSize = dict['pageSize']
         pageIndex = dict['pageIndex']
 
-        del dict['pageSize']
-        del dict['pageIndex']
+        data = self.dto.query(dict, {
+            'pageSize': pageSize,
+            'pageIndex': pageIndex
+        })
 
-        allData = Book.objects.all(dict)
-        paginator = Paginator(allData, pageSize)
-
-        data = []
-    
-        try:
-            print(page)
-            data = paginator.page(pageSize)
-        except PageNotAnInteger:
-            data = []
-        except EmptyPage:
-            data = []
-
-        json = {
-            total: sizeof,
-            data: data
-        }
-
-        return HttpResponse(json)
+        if data == False:
+            return HttpResponse(status = 501)
+        else:
+            return JsonResponse(data)
 
     # 查询一个对象
     @login_required
-    def queryOne(request):
-        dict = request.GET
-        data = self.dto.get(dict)
+    def queryOne(self, request):
+        dict = request.GET.dict()
+        data = self.dto.queryOne(dict)
 
-        return HttpResponse(data)
+        if data == False:
+            return HttpResponse(status = 501)
+        elif data == None:
+            return HttpResponse(status = 404)
+        else:
+            return JsonResponse(data)
         
     # 创建
     @login_required
-    def create(request):
-        dict = request.POST
-        data = self.dto.get(dict)
+    def create(self, request):
+        dict = request.POST.dict()
+        data = self.dto.create(dict)
 
-        return HttpResponse(data)
+        if data == False:
+            return HttpResponse(status = 501)
+        else:
+            return JsonResponse(data)
 
     # 更新
     @login_required
-    def update(request):
-        dict = request.POST
-        data = self.dto.get(dict)
+    def update(self, request):
+        dict = request.POST.dict()
+        data = self.dto.update(dict)
 
-        return HttpResponse(data)
+        if data == False:
+            return HttpResponse(status = 501)
+        else:
+            return JsonResponse(data)
 
     # 批量删除
     @login_required
-    def delete(request):
-        ids = request.GET['ids']
+    def delete(self, request):
+        ids = request.GET.dict()['ids'].split(',')
+        data = self.dto.delete(ids)
         
-        return HttpResponse(data)
+        if data == False:
+            return HttpResponse(status = 501)
+        else:
+            return JsonResponse(data)
 
 
     # 删除一个对象
     @login_required
-    def deleteOne(request):
-        id = request.GET['id']
-        return HttpResponse(data)
+    def deleteOne(self, request):
+        dict = request.GET()
+        data = self.dto.deleteOne(dict)
+
+        if data == False:
+            return HttpResponse(status = 501)
+        else:
+            return JsonResponse(data)
