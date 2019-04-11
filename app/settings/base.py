@@ -12,23 +12,22 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
-  'django.contrib.auth',
-  'django.contrib.contenttypes',
-  'django.contrib.sessions',
+  "django.contrib.contenttypes",
+  "django.contrib.sessions",
   "django.contrib.messages",
   "db",
   "app"
 ]
 
-MIDDLEWARE = [
-  "django.middleware.security.SecurityMiddleware",
+MIDDLEWARES = (
   "django.contrib.sessions.middleware.SessionMiddleware",
-  "django.middleware.common.CommonMiddleware",
-  "django.middleware.csrf.CsrfViewMiddleware",
-  "django.contrib.auth.middleware.AuthenticationMiddleware",
-  "django.contrib.messages.middleware.MessageMiddleware",
-  "django.middleware.clickjacking.XFrameOptionsMiddleware"
-]
+  "app.middlewares.ApiMiddleware",
+  "app.middlewares.ViewMiddleware",
+  "app.middlewares.AuthorizeMiddleware"
+)
+
+SESSION_ENGINE = ["django.contrib.sessions.backends.cache"]
+SESSION_COOKIE_HTTPONLY = True
 
 ROOT_URLCONF = "app.urls"
 
@@ -40,7 +39,6 @@ TEMPLATES = [{
     "context_processors": [
       "django.template.context_processors.debug",
       "django.template.context_processors.request",
-      "django.contrib.auth.context_processors.auth",
       "django.contrib.messages.context_processors.messages",
     ],
   }
