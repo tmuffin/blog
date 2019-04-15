@@ -6,7 +6,7 @@
 from django.db import models
 
 # 标签
-class Tag (models.Model):
+class TagDao(models.Model):
   # 标签名称
   name = models.CharField(max_length = 32, null = False)
 

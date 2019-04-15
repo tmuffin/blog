@@ -5,5 +5,5 @@
 from django.http import HttpResponse
 from . import Controller
 
-class Event:
+class EventController(Controller):
     pass

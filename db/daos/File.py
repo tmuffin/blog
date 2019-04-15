@@ -3,12 +3,12 @@
     @author Philip
 '''
 from django.db import models
-from . import FileType, Tag
+from . import FileTypeDao
 
 # 文件
-class File(models.Model):
+class FileDao(models.Model):
     # 文件类型
-    type = models.ForeignKey(FileType, on_delete = models.SET_NULL, null = False)
+    type = models.ForeignKey(FileTypeDao, on_delete = models.SET_NULL, null = False)
 
     # 文件名称
     name = models.CharField(max_length = 64, null = False)

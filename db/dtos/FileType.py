@@ -4,5 +4,5 @@
 '''
 from . import Dto
 
-class FileType:
+class FileTypeDto:
     pass

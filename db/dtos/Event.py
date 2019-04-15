@@ -4,5 +4,5 @@
 '''
 from . import Dto
 
-class Event:
+class EventDto:
     pass

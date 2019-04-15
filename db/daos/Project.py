@@ -3,14 +3,14 @@
     @author Philip
 '''
 from django.db import models
-from . import User, Tag
+from . import UserDao, TagDao
 
-class Project (models.Model):
+class ProjectDao(models.Model):
     # 作者
-    author = models.ForeignKey(User, on_delete = models.SET_NULL, null = False)
+    author = models.ForeignKey(UserDao, on_delete = models.SET_NULL, null = False)
 
     # 标签
-    tags = models.ManyToManyField(Tag, null = True)
+    tags = models.ManyToManyField(TagDao, null = True)
 
     # 项目描述
     description = models.CharField(max_length = 80)

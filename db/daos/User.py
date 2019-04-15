@@ -3,9 +3,9 @@
     @author Philip
 '''
 from django.db import models
-from . import Role
+from . import RoleDao
 
-class User (models.Model):
+class UserDao(models.Model):
     # id
     id = models.CharField(max_length = 16, primary_key = True)
 
@@ -25,4 +25,4 @@ class User (models.Model):
     phone = models.CharField(max_length = 128, null = True)
 
     # 角色
-    role = models.ForeignKey(Role, on_delete = models.SET_NULL, null = False)
+    role = models.ForeignKey(RoleDao, on_delete = models.SET_NULL, null = False)

@@ -4,5 +4,5 @@
 '''
 from . import Dto
 
-class Diary:
+class DiaryDto:
     pass

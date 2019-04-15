@@ -4,5 +4,5 @@
 '''
 from . import Dto
 
-class Message:
+class MessageDto:
     pass

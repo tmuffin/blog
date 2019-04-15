@@ -5,5 +5,5 @@
 from django.http import HttpResponse
 from . import Controller
 
-class Message:
+class MessageController(Controller):
     pass

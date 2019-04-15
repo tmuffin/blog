@@ -4,7 +4,7 @@
 '''
 from django.db import models
 
-class FileType(models.Model):
+class FileTypeDao(models.Model):
     # 文件类型
     type = models.CharField(max_length = 32, null = False)
 

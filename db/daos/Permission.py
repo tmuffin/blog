@@ -6,7 +6,7 @@ from django.db import models
 
 # 权限以增删改查, curd, 1-1-1-1
 # 权限
-class Permission (models.Model):
+class PermissionDao(models.Model):
     # 权限对象
     object = models.CharField(max_length = 32, null = False)
 

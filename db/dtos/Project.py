@@ -4,5 +4,5 @@
 '''
 from . import Dto
 
-class Project:
+class ProjectDto:
     pass

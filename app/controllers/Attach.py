@@ -5,5 +5,5 @@
 from django.http import HttpResponse
 from . import Controller
 
-class Attach:
+class AttachController(Controller):
     pass

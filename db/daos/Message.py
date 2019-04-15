@@ -4,12 +4,12 @@
 '''
 
 from django.db import models
-from . import User
+from . import UserDao
 
 # 消息
-class Message(models.Model):
+class MessageDao(models.Model):
     # 作者
-    author = models.ForeignKey(User, on_delete = models.SET_NULL, null = False)
+    author = models.ForeignKey(UserDao, on_delete = models.SET_NULL, null = False)
 
     # 标题
     title = models.CharField(max_length = 32, null = False)

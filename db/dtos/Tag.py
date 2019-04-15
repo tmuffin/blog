@@ -4,5 +4,5 @@
 '''
 from . import Dto
 
-class Tag:
+class TagDto:
     pass

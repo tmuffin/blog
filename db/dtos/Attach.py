@@ -4,5 +4,5 @@
 '''
 from . import Dto
 
-class Attach(Dto):
+class AttachDto(Dto):
     pass

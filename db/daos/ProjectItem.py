@@ -3,11 +3,11 @@
     @author Philip
 '''
 from django.db import models
-from . import Project
+from . import ProjectDao
 
-class ProjectItem (models.Model):
+class ProjectItem(models.Model):
     # 作者
-    project = models.ForeignKey(Project, on_delete = models.SET_NULL, null = False)
+    project = models.ForeignKey(ProjectDao, on_delete = models.SET_NULL, null = False)
 
     # 子项标题
     title = models.CharField(max_length = 32)

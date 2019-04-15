@@ -3,14 +3,14 @@
     @author Philip
 '''
 from django.db import models
-from . import User, Tag
+from . import UserDao, TagDao
 
-class Diary (models.Model):
+class DiaryDao(models.Model):
     # 作者
-    author = models.ForeignKey(User, on_delete = models.SET_NULL)
+    author = models.ForeignKey(UserDao, on_delete = models.SET_NULL)
 
     # 标签
-    tags = models.ManyToManyField(Tag, null = True)
+    tags = models.ManyToManyField(TagDao, null = True)
     
     # 标题
     title = models.CharField(max_length = 32, null = False)
