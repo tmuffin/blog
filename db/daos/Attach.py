@@ -3,7 +3,7 @@
     @author Philip
 '''
 from django.db import models
-from . import FileDao, EventDao, ProjectDao, DiaryDao
+from . import FileDao, EventDao, ProjectDao, DiaryDao, ContentDao
 
 # 内容
 class AttachDao(models.Model):
@@ -21,6 +21,9 @@ class AttachDao(models.Model):
 
     # 项目
     project = models.ForeignKey(ProjectDao, on_delete = models.SET_NULL, null = True)
+
+    # 内容
+    content = models.ForeignKey(ContentDao, on_delete = models.SET_NULL, null = True)
 
     # 保存日期
     createdAt = models.DateTimeField(auto_now = True)

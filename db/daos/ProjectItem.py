@@ -13,7 +13,7 @@ class ProjectItem(models.Model):
     title = models.CharField(max_length = 32)
 
     # 子项内容
-    content = models.CharField(max_length = 80)
+    content = models.CharField(max_length = 128)
 
     # 保存日期
     createdAt = models.DateTimeField(auto_now = True)
