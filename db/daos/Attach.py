@@ -7,6 +7,9 @@ from . import FileDao, EventDao, ProjectDao, DiaryDao
 
 # 内容
 class AttachDao(models.Model):
+    # 标题
+    title = models.CharField(max_length = 32, null = False)
+
     # 事件
     file = models.ForeignKey(FileDao, on_delete = models.SET_NULL, null = True)
 
