@@ -19,7 +19,7 @@ class UserDao(models.Model):
     avatar = models.CharField(max_length = 128, null = True)
 
     # 邮箱
-    email = models.CharField(max_length = 32, null = True)
+    email = models.CharField(max_length = 128, null = True)
 
     # 电话号码
     phone = models.CharField(max_length = 128, null = True)
