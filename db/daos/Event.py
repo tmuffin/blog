@@ -13,10 +13,10 @@ class EventDao(models.Model):
     tags = models.ManyToManyField(TagDao, null = True)
 
     # 事件名称
-    name = models.CharField(max_length = 32, null = False)
+    title = models.CharField(max_length = 32, null = False)
     
     # 描述
-    description = models.CharField(max_length = 64)
+    description = models.CharField(max_length = 80)
     
     # 内容
     content = models.CharField(max_length = 384)

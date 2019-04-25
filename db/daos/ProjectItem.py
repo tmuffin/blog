@@ -6,7 +6,7 @@ from django.db import models
 from . import ProjectDao
 
 class ProjectItem(models.Model):
-    # 作者
+    # 项目
     project = models.ForeignKey(ProjectDao, on_delete = models.SET_NULL, null = False)
 
     # 子项标题

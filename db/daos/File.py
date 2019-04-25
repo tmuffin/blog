@@ -11,7 +11,7 @@ class FileDao(models.Model):
     type = models.ForeignKey(FileTypeDao, on_delete = models.SET_NULL, null = False)
 
     # 文件名称
-    name = models.CharField(max_length = 64, null = False)
+    name = models.CharField(max_length = 32, null = False)
 
     # 文件地址
     path = models.CharField(max_length = 256, null = False)

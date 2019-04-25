@@ -22,7 +22,7 @@ class UserDao(models.Model):
     email = models.CharField(max_length = 128, null = True)
 
     # 电话号码
-    phone = models.CharField(max_length = 128, null = True)
+    phone = models.CharField(max_length = 32, null = True)
 
     # 角色
     role = models.ForeignKey(RoleDao, on_delete = models.SET_NULL, null = False)
