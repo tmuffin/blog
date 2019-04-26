@@ -1,9 +1,13 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 '''
     dao 事件
     @author Philip
 '''
 from django.db import models
-from . import UserDao, TagDao
+from db.daos.User import UserDao
+from db.daos.Tag import TagDao
 
 class EventDao(models.Model):
     # 作者

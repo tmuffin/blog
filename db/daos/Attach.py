@@ -1,9 +1,16 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 '''
     dao 附件
     @author Philip
 '''
 from django.db import models
-from . import FileDao, EventDao, ProjectDao, DiaryDao, ContentDao
+from db.daos.File import FileDao
+from db.daos.Diary import DiaryDao
+from db.daos.Event import EventDao
+from db.daos.Project import ProjectDao
+from db.daos.Content import ContentDao
 
 # 内容
 class AttachDao(models.Model):

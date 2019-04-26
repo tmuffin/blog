@@ -1,9 +1,12 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 '''
     dao 文件
     @author Philip
 '''
 from django.db import models
-from . import FileTypeDao
+from db.daos.FileType import FileTypeDao
 
 # 文件
 class FileDao(models.Model):

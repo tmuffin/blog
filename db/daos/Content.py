@@ -1,9 +1,13 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 '''
     dao 内容
     @author Philip
 '''
 from django.db import models
-from . import UserDao, TagDao
+from db.daos.User import UserDao
+from db.daos.Tag import TagDao
 
 # 内容
 class ContentDao(models.Model):
