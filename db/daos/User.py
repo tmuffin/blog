@@ -29,3 +29,7 @@ class UserDao(models.Model):
 
     # 角色
     role = models.ForeignKey(RoleDao, on_delete = models.SET_NULL, null = False)
+
+    # 指向数据库
+    class Meta: 
+        app_label = 'blog'

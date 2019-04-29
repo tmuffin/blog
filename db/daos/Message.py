@@ -25,3 +25,7 @@ class MessageDao(models.Model):
     
     # 最后修改日期
     updatedAt = models.DateTimeField(auto_now = True)
+
+    # 指向数据库
+    class Meta: 
+        app_label = 'blog'

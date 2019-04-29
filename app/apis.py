@@ -1,3 +1,4 @@
+# api 配置
 import urllib.request
 from django.shortcuts import render
 from django.http import HttpResponse
