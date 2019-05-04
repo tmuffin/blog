@@ -5,6 +5,6 @@ from django.contrib.auth.decorators import login_required
  
 urlpatterns = [
 	url(r'^$', views.home),
-    url(r'^$voyage', views.voyage),
-    url(r'^$blog', views.blog)
+    url(r'^voyage/?', views.voyage),
+    url(r'^blog/?', views.blog)
 ]
