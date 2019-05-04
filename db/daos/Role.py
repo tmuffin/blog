@@ -6,7 +6,7 @@
     @author Philip
 '''
 from django.db import models
-from . import PermissionDao
+from db.daos.Permission import PermissionDao
 
 class RoleDao(models.Model):
     # 角色名称

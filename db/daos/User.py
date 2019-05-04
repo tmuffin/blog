@@ -6,7 +6,7 @@
     @author Philip
 '''
 from django.db import models
-from . import RoleDao
+from db.daos.Role import RoleDao
 
 class UserDao(models.Model):
     # id

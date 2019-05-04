@@ -6,7 +6,8 @@
     @author Philip
 '''
 from django.db import models
-from . import UserDao, TagDao
+from db.daos.User import UserDao
+from db.daos.Tag import TagDao
 
 class ProjectDao(models.Model):
     # 作者
@@ -22,10 +23,10 @@ class ProjectDao(models.Model):
     title = models.CharField(max_length = 32, null = False)
 
     # 开始日期
-    start = models.DateField(auto_noew = true)
+    start = models.DateField(auto_now = True)
 
     # 完成日期
-    end = models.DateField(auto_noew = true)
+    end = models.DateField(auto_now = True)
 
     # 保存日期
     createdAt = models.DateTimeField(auto_now = True)

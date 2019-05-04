@@ -6,7 +6,7 @@
     @author Philip
 '''
 from django.db import models
-from . import ProjectDao
+from db.daos.Project import ProjectDao
 
 class ProjectItem(models.Model):
     # 项目

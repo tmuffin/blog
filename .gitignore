@@ -5,3 +5,5 @@ venv/
 db/__pycache__
 app/settings/__pycache__
 app/__pycache__
+db/daos/__pycache__
+db/migrations/__pycache__

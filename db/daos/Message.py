@@ -7,7 +7,7 @@
 '''
 
 from django.db import models
-from . import UserDao
+from db.daos.User import UserDao
 
 # 消息
 class MessageDao(models.Model):

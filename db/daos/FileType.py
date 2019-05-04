@@ -19,4 +19,5 @@ class FileTypeDao(models.Model):
 
     # 指向数据库
     class Meta: 
-        app_label = 'blog'
+        app_label = "blog"
+        db_table = "fileType"
