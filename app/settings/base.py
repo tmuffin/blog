@@ -52,7 +52,7 @@ DATABASES = {
     "NAME": "blog",
     "USER": "admin",
     "PASSWORD": "Wowcxy2008",
-    "HOST":"localhost",
+    "HOST":"127.0.0.1",
     "PORT":"3306",
   }
 }
